@@ -1,7 +1,7 @@
 abstract class Hotdrink {
-    abstract boilwater(): void;
-    abstract blend(): void;
-  static get factory():typeof DrinkFactory{
+  abstract boilwater(): void;
+  abstract blend(): void;
+  static get factory(): typeof DrinkFactory {
     return DrinkFactory;
   }
 }
@@ -36,26 +36,24 @@ class Coffee extends Hotdrink {
         "litre and put together with sugar amount " +
         this.sugaramount +
         " , condensed milk amount " +
-        this.condensedmilkamount+
-        " and add coffee type "+this.coffee_type+
+        this.condensedmilkamount +
+        " and add coffee type " +
+        this.coffee_type +
         "and blend."
     );
   }
 }
 
-
-class DrinkFactory{
-    
-    static makeCoffee(coffeetype: string,
-        wateramount: number,
-        sugaramount: number,
-        condensedmilamount: number): Coffee  {
-        return new Coffee(coffeetype,
-            wateramount,
-            sugaramount,
-            condensedmilamount);
-    }
+class DrinkFactory {
+  static makeCoffee(
+    coffeetype: string,
+    wateramount: number,
+    sugaramount: number,
+    condensedmilamount: number
+  ): Coffee {
+    return new Coffee(coffeetype, wateramount, sugaramount, condensedmilamount);
+  }
 }
 
-let p2=Coffee.factory.makeCoffee("americano",.5,1,1);
+let p2 = Coffee.factory.makeCoffee("americano", 0.5, 1, 1);
 console.log(p2.blend());

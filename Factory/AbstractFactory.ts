@@ -71,6 +71,7 @@ abstract class Drink_Factory<T> {
     return "Your drink is served";
   }
 }
+
 class TeaFactory extends Drink_Factory<Drinks> {
   serve(
     wateramount: number,
