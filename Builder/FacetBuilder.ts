@@ -68,12 +68,10 @@ class powersupplyBuilder extends ComputerBaseBuilder {
   }
 }
 const pc = new ComputerBaseBuilder();
-const computer=pc.cpu
-.setcpu("Core i7")
-.gpu.setgpu("RTX 4080 12GB")
-.ram.setram("DDR4 Desktop 32GB")
-.powersupply.setpowersupply("Corsiar")
-.build()
-console.log(
-    computer
-);
+const computer = pc.cpu
+  .setcpu("Core i7")
+  .gpu.setgpu("RTX 4080 12GB")
+  .ram.setram("DDR4 Desktop 32GB")
+  .powersupply.setpowersupply("Corsiar")
+  .build();
+console.log(computer);
